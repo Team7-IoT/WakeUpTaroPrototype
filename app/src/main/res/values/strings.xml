@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Team7 プロトタイプアプリ</string>
+    <string name="label_connect_status">N/A</string>
+    <string name="label_receive_data">N/A</string>
+    <string name="action_settings">Settings</string>
+    <string name="ble_not_supported">本アプリを使うには Android 4.3 のデバイスが必要です。</string>
+</resources>
