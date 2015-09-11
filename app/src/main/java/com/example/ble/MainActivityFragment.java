@@ -1,4 +1,4 @@
-package com.example.alarmiotprototypeapp;
+package com.example.ble;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

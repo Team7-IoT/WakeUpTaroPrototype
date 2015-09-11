@@ -1,4 +1,4 @@
-package com.example.alarmiotprototypeapp;
+package com.example.ble;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
