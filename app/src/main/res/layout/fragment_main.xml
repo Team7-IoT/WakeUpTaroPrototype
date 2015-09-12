@@ -8,42 +8,44 @@
     <TextView android:text="@string/label_connect_status" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/labelConnectStatus"
-        android:layout_marginTop="40dp"
         android:textSize="28sp"
-        android:layout_below="@+id/startScan"
-        android:layout_toEndOf="@+id/startScan" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Let&apos;s SCAN"
+        android:text="start"
         android:id="@+id/startScan"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="36dp"
         android:nestedScrollingEnabled="false"
         android:onClick="startScan"
         android:layout_below="@+id/switchBluetooth"
-        android:layout_toStartOf="@+id/labelReceiveData" />
+        android:layout_toStartOf="@+id/labelBattery"
+        android:enabled="true"
+        android:background="#7CFC00" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:id="@+id/send"
-        android:layout_below="@+id/labelConnectStatus"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:onClick="sendSignal" />
+        android:text="Alarm"
+        android:id="@+id/writeAlarm"
+        android:layout_marginTop="190dp"
+        android:onClick="doWriteAlarm"
+        android:layout_below="@+id/switchBluetooth"
+        android:layout_toStartOf="@+id/switchBluetooth"
+        android:enabled="false"
+        android:background="#FFFF00" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/label_receive_data"
-        android:id="@+id/labelReceiveData"
-        android:layout_below="@+id/send"
+        android:id="@+id/labelBattery"
+        android:textSize="28sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:textSize="32sp" />
+        android:layout_below="@+id/readBattery" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -57,10 +59,69 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop Scan"
+        android:text="stop"
         android:id="@+id/stopScan"
         android:onClick="stopScan"
+        android:enabled="true"
+        android:layout_marginLeft="55dp"
+        android:layout_toEndOf="@+id/labelConnectStatus"
+        android:layout_toRightOf="@+id/startScan"
         android:layout_alignTop="@+id/startScan"
-        android:layout_toEndOf="@+id/labelConnectStatus" />
+        android:background="#FF69B4" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="vibration"
+        android:id="@+id/writeVibration"
+        android:layout_centerHorizontal="true"
+        android:onClick="doWriteVibration"
+        android:layout_below="@+id/switchBluetooth"
+        android:layout_marginTop="190dp"
+        android:enabled="false"
+        android:background="#87CEFF" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:id="@+id/writeStop"
+        android:layout_toEndOf="@+id/switchBluetooth"
+        android:onClick="doWriteStop"
+        android:layout_marginTop="190dp"
+        android:layout_below="@+id/switchBluetooth"
+        android:enabled="false"
+        android:background="#FFC0CB" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read Battery"
+        android:id="@+id/readBattery"
+        android:layout_below="@+id/writeVibration"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:onClick="doReadBattery" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Push count"
+        android:id="@+id/textPushCount"
+        android:layout_marginTop="34dp"
+        android:textSize="28sp"
+        android:layout_below="@+id/labelBattery"
+        android:layout_alignStart="@+id/startScan" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_push_count"
+        android:id="@+id/labelPushCount"
+        android:textSize="28sp"
+        android:layout_toEndOf="@+id/writeVibration"
+        android:layout_toRightOf="@+id/textPushCount"
+        android:layout_alignTop="@+id/textPushCount"
+        android:layout_marginLeft="10dp" />
 
 </RelativeLayout>
